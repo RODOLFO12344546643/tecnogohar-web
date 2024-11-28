@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Bluetooth - TecnoHogar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay loop muted id="background-video">
+        <source src="TECNO.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
+    <div class="container">
+        <h1>TECNOHOGAR</h1>
+        <p class="subtitle">Controla tu hogar de forma inteligente desde cualquier dispositivo. 
+            Compatible con Android, iOS, Windows y Mac.</p>
+
+        <div id="statusMessage">Estado: Esperando acción...</div>
+
+        <!-- Botón para conectar al dispositivo Bluetooth -->
+        <button onclick="connectBluetooth()">Conectar Bluetooth</button>
+
+        <!-- Botones para controlar el servomotor y el relé -->
+        <button onclick="controlServo('0')">Abrir Puerta</button>
+        <button onclick="controlServo('1')">Cerrar Puerta</button>
+        <button onclick="controlRelay('9')">Prender Foco</button>
+        <button onclick="controlRelay('8')">Apagar Foco</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
